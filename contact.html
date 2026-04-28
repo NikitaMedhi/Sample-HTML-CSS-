@@ -10,9 +10,54 @@
 <body>
   <div class="page-container">
     <h1>Contact Us</h1>
-    <p>Email: hello@simpleco.com</p>
-    <p>Phone: +91 9876543210</p>
+    <form id="contactForm" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" required />
+        <span class="error" id="nameError"></span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required />
+        <span class="error" id="emailError"></span>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone*</label>
+        <input type="tel" id="phone" name="phone" required />
+        <span class="error" id="phoneError"></span>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject*</label>
+        <input type="text" id="subject" name="subject" required />
+        <span class="error" id="subjectError"></span>
+      </div>
+      <div class="form-group">
+        <label for="category">Category*</label>
+        <select id="category" name="category" required>
+          <option value="">Select</option>
+          <option value="Sales">Sales</option>
+          <option value="Support">Support</option>
+          <option value="General">General</option>
+        </select>
+        <span class="error" id="categoryError"></span>
+      </div>
+      <div class="form-group">
+        <label for="message">Message*</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <span class="error" id="messageError"></span>
+      </div>
+      <button type="submit">Submit</button>
+      <div class="success" id="successMsg"></div>
+    </form>
     <a href="index.html">← Back Home</a>
+    <div class="theme-controls">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
+      <button id="contrastToggle" class="contrast-toggle" aria-label="Toggle high contrast">High Contrast</button>
+      <button class="font-size-btn" data-size="small" aria-label="Small font">A-</button>
+      <button class="font-size-btn" data-size="medium" aria-label="Medium font">A</button>
+      <button class="font-size-btn" data-size="large" aria-label="Large font">A+</button>
+    </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
