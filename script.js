@@ -17,7 +17,7 @@
     document.body.classList.add(`font-${fontSize}`);
     fontBtns.forEach(btn => btn.classList.remove("active"));
     document.querySelector(`.font-size-btn[data-size='${fontSize}']`)?.classList.add("active");
-    if (themeToggle) themeToggle.textContent = theme === "dark" ? "☀️ Light" : "🌙 Dark";
+    if (themeToggle) themeToggle.textContent = theme === "dark" ? "\u2600\ufe0f Light" : "\ud83c\udf19 Dark";
     if (contrastToggle) contrastToggle.textContent = contrast === "high" ? "Normal Contrast" : "High Contrast";
   }
   // Theme toggle

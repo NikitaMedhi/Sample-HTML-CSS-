@@ -221,3 +221,6 @@ body {
   margin-top: 15px;
   text-align: center;
 }
+.font-small { font-size: 15px; }
+.font-medium { font-size: 18px; }
+.font-large { font-size: 22px; }
