@@ -77,7 +77,25 @@ body {
   padding: 8px 14px;
   border-radius: 6px;
 }
-
+.theme-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+.theme-toggle, .contrast-toggle, .font-size-btn {
+  background: var(--btn-bg);
+  color: var(--navbar-text);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+.theme-toggle:hover, .contrast-toggle:hover, .font-size-btn:hover {
+  background: var(--btn-hover-bg);
+}
 .font-size-btn.active {
   outline: 2px solid var(--btn-hover-bg);
 }
