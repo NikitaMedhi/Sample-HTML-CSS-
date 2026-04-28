@@ -70,9 +70,11 @@ body {
 .page-container {
   max-width: 700px;
   margin: 100px auto;
-  background: white;
+  background: linear-gradient(135deg, #fffbe6 60%, #ffe066 100%);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(255, 224, 102, 0.15);
+  border: 2px solid #ffe066;
 }
 
 /* Login */
