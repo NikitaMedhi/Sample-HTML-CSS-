@@ -77,6 +77,51 @@ body {
   border: 2px solid #ffe066;
 }
 
+/* Booking Form */
+.booking-form {
+  background: white;
+  padding: 35px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  margin: 0 auto 30px auto;
+}
+.booking-form label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.booking-form button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.booking-form .success {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+.booking-form .error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
 /* Login */
 .login-container {
   display: flex;

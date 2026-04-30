@@ -39,3 +39,49 @@ if (loginForm) {
     }
   });
 }
+
+// Booking form validation and submission
+const bookingForm = document.getElementById("bookingForm");
+if (bookingForm) {
+  bookingForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("bookingEmail").value.trim();
+    let service = document.getElementById("service").value;
+    let date = document.getElementById("date").value;
+    let nameError = document.getElementById("nameError");
+    let emailError = document.getElementById("bookingEmailError");
+    let serviceError = document.getElementById("serviceError");
+    let dateError = document.getElementById("dateError");
+    let successMsg = document.getElementById("bookingSuccess");
+    nameError.textContent = "";
+    emailError.textContent = "";
+    serviceError.textContent = "";
+    dateError.textContent = "";
+    successMsg.textContent = "";
+    let valid = true;
+    if (name === "") {
+      nameError.textContent = "Name is required";
+      valid = false;
+    }
+    if (email === "") {
+      emailError.textContent = "Email is required";
+      valid = false;
+    } else if (!email.includes("@")) {
+      emailError.textContent = "Enter valid email";
+      valid = false;
+    }
+    if (service === "") {
+      serviceError.textContent = "Please select a service";
+      valid = false;
+    }
+    if (date === "") {
+      dateError.textContent = "Please select a date";
+      valid = false;
+    }
+    if (valid) {
+      successMsg.textContent = "Your booking request has been submitted!";
+      bookingForm.reset();
+    }
+  });
+}
