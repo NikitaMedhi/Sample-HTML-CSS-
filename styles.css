@@ -267,3 +267,26 @@ body {
   margin-bottom: 8px;
   font-size: 16px;
 }
+
+/* Back to Top Button */
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+  font-size: 28px;
+  border: none;
+  outline: none;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  padding: 16px 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.18);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+#backToTopBtn:hover {
+  background-color: #1e293b;
+  box-shadow: 0 6px 24px rgba(30,41,59,0.18);
+}

@@ -113,3 +113,20 @@ if (newsletterForm) {
     newsletterForm.reset();
   });
 }
+
+// Back to Top Button functionality
+const backToTopBtn = document.getElementById("backToTopBtn");
+window.onscroll = function() {
+  if (backToTopBtn) {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  }
+};
+if (backToTopBtn) {
+  backToTopBtn.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
