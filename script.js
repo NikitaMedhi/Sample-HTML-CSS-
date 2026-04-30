@@ -85,3 +85,31 @@ if (bookingForm) {
     }
   });
 }
+
+// Newsletter subscription form validation and feedback
+const newsletterForm = document.getElementById("newsletterForm");
+if (newsletterForm) {
+  newsletterForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const emailInput = document.getElementById("newsletterEmail");
+    const msgDiv = document.getElementById("newsletterMsg");
+    const email = emailInput.value.trim();
+    msgDiv.textContent = "";
+    msgDiv.className = "newsletter-msg";
+    if (email === "") {
+      msgDiv.textContent = "Email is required.";
+      msgDiv.classList.add("error");
+      return;
+    }
+    // Simple email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      msgDiv.textContent = "Please enter a valid email address.";
+      msgDiv.classList.add("error");
+      return;
+    }
+    msgDiv.textContent = "Thank you for subscribing!";
+    msgDiv.classList.add("success");
+    newsletterForm.reset();
+  });
+}
