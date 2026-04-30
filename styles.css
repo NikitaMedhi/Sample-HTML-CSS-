@@ -66,6 +66,49 @@ body {
   border-radius: 6px;
 }
 
+/* Card-Based Layout */
+.card-section {
+  max-width: 1100px;
+  margin: 60px auto 0 auto;
+  padding: 0 20px 40px 20px;
+}
+.card-section h3 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #1e293b;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(37,99,235,0.10);
+  border: 2px solid #2563eb22;
+  padding: 36px 28px;
+  width: 320px;
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+  cursor: pointer;
+}
+.service-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 36px rgba(37,99,235,0.18);
+  border: 2px solid #2563eb;
+}
+.service-card h4 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #2563eb;
+}
+.service-card p {
+  font-size: 16px;
+  color: #333;
+}
+
 /* Pages */
 .page-container {
   max-width: 700px;
@@ -75,6 +118,51 @@ body {
   border-radius: 16px;
   box-shadow: 0 6px 24px rgba(255, 224, 102, 0.15);
   border: 2px solid #ffe066;
+}
+
+/* Booking Form */
+.booking-form {
+  background: white;
+  padding: 35px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  margin: 0 auto 30px auto;
+}
+.booking-form label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.booking-form button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.booking-form .success {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+.booking-form .error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 4px;
 }
 
 /* Login */
@@ -125,4 +213,123 @@ body {
 .signup-text {
   margin-top: 15px;
   text-align: center;
+}
+
+/* Footer */
+.site-footer {
+  background: #1e293b;
+  color: #fff;
+  padding: 40px 0 18px 0;
+  margin-top: 60px;
+  font-size: 16px;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto 18px auto;
+  gap: 32px;
+}
+.footer-section {
+  flex: 1 1 220px;
+  min-width: 180px;
+}
+.footer-section h3, .footer-section h4 {
+  margin-bottom: 10px;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin-bottom: 6px;
+}
+.footer-section ul a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-section ul a:hover {
+  color: #ffe066;
+}
+.footer-bottom {
+  text-align: center;
+  font-size: 15px;
+  color: #ffe066;
+  margin-top: 10px;
+}
+@media (max-width: 800px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .footer-section {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Dashboard */
+.dashboard-container {
+  max-width: 800px;
+  margin: 80px auto;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(37,99,235,0.08);
+  border: 2px solid #2563eb22;
+}
+.dashboard-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2563eb;
+}
+.dashboard-section {
+  margin-bottom: 32px;
+}
+.dashboard-section h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+.dashboard-activity-list,
+.dashboard-submissions-list,
+.dashboard-interactions-list {
+  list-style: disc inside;
+  background: #f4f7fa;
+  padding: 18px 20px;
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+.dashboard-activity-list li,
+.dashboard-submissions-list li,
+.dashboard-interactions-list li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* Back to Top Button */
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+  font-size: 28px;
+  border: none;
+  outline: none;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  padding: 16px 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.18);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+#backToTopBtn:hover {
+  background-color: #1e293b;
+  box-shadow: 0 6px 24px rgba(30,41,59,0.18);
 }

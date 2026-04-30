@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +24,48 @@
     <p>We build clean and modern web solutions for businesses.</p>
     <a href="login.html" class="hero-btn">Get Started</a>
   </section>
+
+  <!-- Modern Card-Based Layout Section -->
+  <section class="card-section">
+    <h3>Our Services</h3>
+    <div class="card-container">
+      <div class="service-card">
+        <h4>Consultation</h4>
+        <p>Expert advice to help your business grow and succeed online.</p>
+      </div>
+      <div class="service-card">
+        <h4>Web Development</h4>
+        <p>Custom websites and web apps built for performance and style.</p>
+      </div>
+      <div class="service-card">
+        <h4>SEO Optimization</h4>
+        <p>Boost your visibility and reach more customers with our SEO services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Subscription -->
+  <section class="newsletter-section">
+    <h3>Subscribe to our Newsletter</h3>
+    <form id="newsletterForm" class="newsletter-form">
+      <input type="email" id="newsletterEmail" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+      <div id="newsletterMsg" class="newsletter-msg"></div>
+    </form>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" title="Go to top">&#8679;</button>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
 
   <script src="script.js"></script>
 </body>
